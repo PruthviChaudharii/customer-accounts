@@ -12,7 +12,10 @@ These are actual repository issues with milestones, estimates and acceptance cri
 | 6 | [Need the ability to automate continuous integration checks](https://github.com/PruthviChaudharii/customer-accounts/issues/6) | 2 | 5 | Completed and verified locally |
 | 7 | [Need to add security headers and CORS policies](https://github.com/PruthviChaudharii/customer-accounts/issues/7) | 2 | 3 | Completed and verified locally |
 | 8 | [Containerize your microservice using Docker](https://github.com/PruthviChaudharii/customer-accounts/issues/8) | 3 | 5 | Completed and verified locally |
-| 9 | [Deploy your Docker image to Kubernetes](https://github.com/PruthviChaudharii/customer-accounts/issues/9) | 3 | 5 | Pending external run |
-| 10 | [Create a CD pipeline to automate deployment to Kubernetes](https://github.com/PruthviChaudharii/customer-accounts/issues/10) | 3 | 5 | Pending external run |
+| 9 | [Deploy your Docker image to Kubernetes](https://github.com/PruthviChaudharii/customer-accounts/issues/9) | 3 | 5 | Completed on local Kubernetes |
+| 10 | [Create a CD pipeline to automate deployment to Kubernetes](https://github.com/PruthviChaudharii/customer-accounts/issues/10) | 3 | 5 | Tekton PipelineRun accounts-cd-gpd2m succeeded |
 
-A GitHub Projects Kanban board still needs to be configured once Projects access is granted.
+[Public Kanban board](https://github.com/users/PruthviChaudharii/projects/1) includes
+New Issues, Ice Box, Product Backlog, Sprint Backlog, In Progress, Review and Done.
+The Estimate and Sprint fields record planning values. Two future enhancement stories
+remain in the Ice Box (API documentation and pagination).

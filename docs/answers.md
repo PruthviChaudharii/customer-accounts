@@ -1,56 +1,64 @@
-# Submission answers and evidence
+# Answers to copy and paste
 
-Links below are real repository file URLs. Paste actual contents of the named evidence files for text questions.
-Missing screenshots, deployment results, and pipeline logs are pending; do not submit placeholders.
+Upload questions require the named JPEG files. Text blocks below contain captured output.
 
-| Question | Answer or evidence |
-| --- | --- |
-| 1 | https://github.com/PruthviChaudharii/customer-accounts/blob/main/README.md |
-| 2 | https://github.com/PruthviChaudharii/customer-accounts/blob/main/user-story.md |
-| 3 | PENDING: capture actual GitHub board as `planning-userstories-done.png` |
-| 4 | PENDING: capture actual GitHub board as `planning-productbacklog-done.png` |
-| 5 | PENDING: capture actual GitHub board as `planning-labels-done.png` |
-| 6 | PENDING: capture actual GitHub board as `planning-kanban-done.png` |
-| 7 | https://github.com/PruthviChaudharii/customer-accounts/blob/main/setup.cfg |
-| 8 | PENDING: capture actual GitHub board as `rest-techdebt-done.png` |
-| 9 | PENDING: capture actual GitHub board as `read-accounts.png` |
-| 10 | PENDING: capture actual GitHub board as `list-accounts.png` |
-| 11 | PENDING: capture actual GitHub board as `update-accounts.png` |
-| 12 | PENDING: capture actual GitHub board as `delete-accounts.png` |
-| 13 | Paste `evidence/rest-create-done` |
-| 14 | Paste `evidence/rest-list-done` |
-| 15 | Paste `evidence/rest-read-done` |
-| 16 | Paste `evidence/rest-update-done` |
-| 17 | Paste `evidence/rest-delete-done` |
-| 18 | PENDING: capture actual GitHub board as `sprint2-plan.png` |
-| 19 | Paste `evidence/ci-workflow-done` |
-| 20 | PENDING: capture actual GitHub board as `ci-kanban-done.png` |
-| 21 | https://github.com/PruthviChaudharii/customer-accounts/blob/main/.github/workflows/ci-build.yaml |
-| 22 | https://github.com/PruthviChaudharii/customer-accounts/blob/main/service/__init__.py |
-| 23 | Paste `evidence/security-headers-done` |
-| 24 | PENDING: capture actual GitHub board as `security-kanban-done.png` |
-| 25 | PENDING: capture actual GitHub board as `sprint3-plan.png` |
-| 26 | PENDING: collect actual `kube-app-output` |
-| 27 | PENDING: capture actual GitHub board as `kube-docker-done.png` |
-| 28 | PENDING: capture actual GitHub board as `kube-kubernetes-done.png` |
-| 29 | https://github.com/PruthviChaudharii/customer-accounts/blob/main/Dockerfile |
-| 30 | Paste `evidence/kube-images` |
-| 31 | PENDING: collect actual `kube-deploy-accounts` |
-| 32 | PENDING: collect actual `pipelinerun.txt` |
-| 33 | PENDING: capture actual GitHub board as `cd-pipeline-done.png` |
-
-The output in `docker-app-output` is from local Docker and is not proof of Kubernetes deployment.
-CI passed: https://github.com/PruthviChaudharii/customer-accounts/actions/runs/40069532939
-GitHub Projects access needs the `project` scope; the current CLI token lacks it.
-
-
-# Text answers ready to paste
-
-
-## Question 13
+## Question 1 (URL)
 
 ```text
+https://github.com/PruthviChaudharii/customer-accounts/blob/main/README.md
+```
 
+## Question 2 (URL)
+
+```text
+https://github.com/PruthviChaudharii/customer-accounts/blob/main/user-story.md
+```
+
+## Question 3 (UPLOAD)
+
+Upload planning-userstories-done.jpeg, planning-userstories-done-continued.jpeg
+
+## Question 4 (UPLOAD)
+
+Upload planning-productbacklog-done.jpeg
+
+## Question 5 (UPLOAD)
+
+Upload planning-labels-done.jpeg, planning-labels-done-continued.jpeg
+
+## Question 6 (UPLOAD)
+
+Upload planning-kanban-done.jpeg
+
+## Question 7 (URL)
+
+```text
+https://github.com/PruthviChaudharii/customer-accounts/blob/main/setup.cfg
+```
+
+## Question 8 (UPLOAD)
+
+Upload rest-techdebt-done.jpeg
+
+## Question 9 (UPLOAD)
+
+Upload read-accounts.jpeg
+
+## Question 10 (UPLOAD)
+
+Upload list-accounts.jpeg
+
+## Question 11 (UPLOAD)
+
+Upload update-accounts.jpeg
+
+## Question 12 (UPLOAD)
+
+Upload delete-accounts.jpeg
+
+## Question 13 (TEXT)
+
+```text
 curl.exe --silent --show-error --include -X POST http://localhost:8080/accounts -H "Content-Type: application/json" --data-binary @evidence/create-account.json
 
 HTTP/1.1 201 CREATED
@@ -68,15 +76,11 @@ Content-Security-Policy: default-src 'self'; object-src 'none'
 Referrer-Policy: strict-origin-when-cross-origin
 
 {"address":"123 Example Street","date_joined":"2026-10-24","email":"pruthvi.demo@example.com","id":1,"name":"Pruthvi Demo","phone_number":"+91-9000000000"}
-
-
 ```
 
-
-## Question 14
+## Question 14 (TEXT)
 
 ```text
-
 curl.exe --silent --show-error --include http://localhost:8080/accounts
 
 HTTP/1.1 200 OK
@@ -93,15 +97,11 @@ Content-Security-Policy: default-src 'self'; object-src 'none'
 Referrer-Policy: strict-origin-when-cross-origin
 
 [{"address":"123 Example Street","date_joined":"2026-10-24","email":"pruthvi.demo@example.com","id":1,"name":"Pruthvi Demo","phone_number":"+91-9000000000"}]
-
-
 ```
 
-
-## Question 15
+## Question 15 (TEXT)
 
 ```text
-
 curl.exe --silent --show-error --include http://localhost:8080/accounts/1
 
 HTTP/1.1 200 OK
@@ -118,15 +118,11 @@ Content-Security-Policy: default-src 'self'; object-src 'none'
 Referrer-Policy: strict-origin-when-cross-origin
 
 {"address":"123 Example Street","date_joined":"2026-10-24","email":"pruthvi.demo@example.com","id":1,"name":"Pruthvi Demo","phone_number":"+91-9000000000"}
-
-
 ```
 
-
-## Question 16
+## Question 16 (TEXT)
 
 ```text
-
 curl.exe --silent --show-error --include -X PUT http://localhost:8080/accounts/1 -H "Content-Type: application/json" --data-binary @evidence/update-account.json
 
 HTTP/1.1 200 OK
@@ -143,15 +139,11 @@ Content-Security-Policy: default-src 'self'; object-src 'none'
 Referrer-Policy: strict-origin-when-cross-origin
 
 {"address":"123 Example Street","date_joined":"2026-10-24","email":"pruthvi.demo@example.com","id":1,"name":"Pruthvi Updated","phone_number":"+91-9000000000"}
-
-
 ```
 
-
-## Question 17
+## Question 17 (TEXT)
 
 ```text
-
 curl.exe --silent --show-error --include -X DELETE http://localhost:8080/accounts/1
 
 HTTP/1.1 204 NO CONTENT
@@ -165,15 +157,15 @@ X-Frame-Options: SAMEORIGIN
 X-Content-Type-Options: nosniff
 Content-Security-Policy: default-src 'self'; object-src 'none'
 Referrer-Policy: strict-origin-when-cross-origin
-
-
 ```
 
+## Question 18 (UPLOAD)
 
-## Question 19
+Upload sprint2-plan.jpeg
+
+## Question 19 (TEXT)
 
 ```text
-
 test	Set up job	﻿2026-10-24T06:16:15.0407450Z Current runner version: '2.338.0'
 test	Set up job	2026-10-24T06:16:15.0423645Z ##[group]Runner Image Provisioner
 test	Set up job	2026-10-24T06:16:15.0424216Z Hosted Compute Agent
@@ -804,15 +796,27 @@ test	Stop containers	2026-10-24T06:16:55.8314259Z ##[command]/usr/bin/docker net
 test	Stop containers	2026-10-24T06:16:55.9127058Z github_network_d40593f89f804a2680838a0e96681556
 test	Complete job	﻿2026-10-24T06:16:55.9184317Z Cleaning up orphan processes
 test	Complete job	2026-10-24T06:16:55.9464094Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-
-
 ```
 
+## Question 20 (UPLOAD)
 
-## Question 23
+Upload ci-kanban-done.jpeg
+
+## Question 21 (URL)
 
 ```text
+https://github.com/PruthviChaudharii/customer-accounts/blob/main/.github/workflows/ci-build.yaml
+```
 
+## Question 22 (URL)
+
+```text
+https://github.com/PruthviChaudharii/customer-accounts/blob/main/service/__init__.py
+```
+
+## Question 23 (TEXT)
+
+```text
 It should Create an account and add it to the database ... ok
 It should Create an Account and assert that it exists ... ok
 It should Delete an account from the database ... ok
@@ -863,17 +867,372 @@ TOTAL                                253      8    97%
 Ran 32 tests in 5.128s
 
 OK
-
-
 ```
 
+## Question 24 (UPLOAD)
 
-## Question 30
+Upload security-kanban-done.jpeg
+
+## Question 25 (UPLOAD)
+
+Upload sprint3-plan.jpeg
+
+## Question 26 (TEXT)
 
 ```text
+{"name":"Account REST API Service","paths":"http://localhost:8080/accounts","version":"1.0"}
+```
 
+## Question 27 (UPLOAD)
+
+Upload kube-docker-done.jpeg
+
+## Question 28 (UPLOAD)
+
+Upload kube-kubernetes-done.jpeg
+
+## Question 29 (URL)
+
+```text
+https://github.com/PruthviChaudharii/customer-accounts/blob/main/Dockerfile
+```
+
+## Question 30 (TEXT)
+
+```text
 REPOSITORY          TAG       IMAGE ID       CREATED AT                      SIZE
 customer-accounts   1.0       fa552051eb3d   2026-10-24 11:45:52 +0530 IST   231MB
-
-
 ```
+
+## Question 31 (TEXT)
+
+```text
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/accounts   1/1     1            1           12m
+deployment.apps/postgres   1/1     1            1           12m
+
+NAME                               READY   STATUS      RESTARTS   AGE
+pod/accounts-85f6b9646c-lqkmx      1/1     Running     0          7m34s
+pod/accounts-cd-gpd2m-build-pod    0/1     Completed   0          9m53s
+pod/accounts-cd-gpd2m-check-pod    0/1     Completed   0          10m
+pod/accounts-cd-gpd2m-clone-pod    0/1     Completed   0          11m
+pod/accounts-cd-gpd2m-deploy-pod   0/1     Completed   0          8m14s
+pod/postgres-6bb9955b9c-j9fvx      1/1     Running     0          12m
+
+NAME                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/accounts-5f7795948f   0         0         0       12m
+replicaset.apps/accounts-6b69c8dcbf   0         0         0       12m
+replicaset.apps/accounts-85f6b9646c   1         1         1       7m34s
+replicaset.apps/postgres-6bb9955b9c   1         1         1       12m
+
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/accounts   ClusterIP   10.43.227.167   <none>        8080/TCP   12m
+service/postgres   ClusterIP   10.43.1.101     <none>        5432/TCP   12m
+```
+
+## Question 32 (TEXT)
+
+```text
+===== clone =====
+[pod/accounts-cd-gpd2m-clone-pod/prepare] 2026/10/24 06:31:52 Entrypoint initialization
+[pod/accounts-cd-gpd2m-clone-pod/place-scripts] 2026/10/24 06:31:59 Decoded script /tekton/scripts/script-0-zjc6k
+[pod/accounts-cd-gpd2m-clone-pod/step-clone] Cloning into 'repo'...
+===== check =====
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting Flask==2.2.5 (from -r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting Werkzeug==2.3.8 (from -r requirements.txt (line 2))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading werkzeug-2.3.8-py3-none-any.whl.metadata (4.1 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting Flask-SQLAlchemy==2.5.1 (from -r requirements.txt (line 3))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl.metadata (3.1 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting SQLAlchemy==1.4.54 (from -r requirements.txt (line 4))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading SQLAlchemy-1.4.54-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting psycopg2-binary==2.9.10 (from -r requirements.txt (line 5))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading psycopg2_binary-2.9.10-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting gunicorn==23.0.0 (from -r requirements.txt (line 6))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting flask-talisman==1.1.0 (from -r requirements.txt (line 7))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl.metadata (18 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting Flask-Cors==6.0.1 (from -r requirements.txt (line 8))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading flask_cors-6.0.1-py3-none-any.whl.metadata (5.3 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting pynose==1.5.5 (from -r requirements-dev.txt (line 2))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading pynose-1.5.5-py3-none-any.whl.metadata (19 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting coverage==7.6.12 (from -r requirements-dev.txt (line 3))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading coverage-7.6.12-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting factory-boy==3.3.3 (from -r requirements-dev.txt (line 4))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading factory_boy-3.3.3-py2.py3-none-any.whl.metadata (15 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting flake8==7.1.2 (from -r requirements-dev.txt (line 5))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading flake8-7.1.2-py2.py3-none-any.whl.metadata (3.8 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting pylint==3.3.4 (from -r requirements-dev.txt (line 6))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading pylint-3.3.4-py3-none-any.whl.metadata (12 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting Jinja2>=3.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting itsdangerous>=2.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting click>=8.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.3.8->-r requirements.txt (line 2))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting greenlet!=0.4.17 (from SQLAlchemy==1.4.54->-r requirements.txt (line 4))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from gunicorn==23.0.0->-r requirements.txt (line 6)) (26.3)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting Faker>=0.7.0 (from factory-boy==3.3.3->-r requirements-dev.txt (line 4))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading faker-40.43.0-py3-none-any.whl.metadata (16 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting mccabe<0.8.0,>=0.7.0 (from flake8==7.1.2->-r requirements-dev.txt (line 5))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting pycodestyle<2.13.0,>=2.12.0 (from flake8==7.1.2->-r requirements-dev.txt (line 5))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading pycodestyle-2.12.1-py2.py3-none-any.whl.metadata (4.5 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting pyflakes<3.3.0,>=3.2.0 (from flake8==7.1.2->-r requirements-dev.txt (line 5))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading pyflakes-3.2.0-py2.py3-none-any.whl.metadata (3.5 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting dill>=0.3.6 (from pylint==3.3.4->-r requirements-dev.txt (line 6))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting platformdirs>=2.2.0 (from pylint==3.3.4->-r requirements-dev.txt (line 6))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading platformdirs-4.13.5-py3-none-any.whl.metadata (5.5 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting astroid<=3.4.0-dev0,>=3.3.8 (from pylint==3.3.4->-r requirements-dev.txt (line 6))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading astroid-3.3.11-py3-none-any.whl.metadata (4.4 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting isort!=5.13.0,<7,>=4.2.5 (from pylint==3.3.4->-r requirements-dev.txt (line 6))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading isort-6.1.0-py3-none-any.whl.metadata (12 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Collecting tomlkit>=0.10.1 (from pylint==3.3.4->-r requirements-dev.txt (line 6))
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]   Downloading tomlkit-0.15.2-py3-none-any.whl.metadata (3.4 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading Flask-2.2.5-py3-none-any.whl (101 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.8/101.8 kB 2.5 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading werkzeug-2.3.8-py3-none-any.whl (242 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.3/242.3 kB 7.9 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading SQLAlchemy-1.4.54-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 18.4 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading psycopg2_binary-2.9.10-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 20.7 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 10.0 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading flask_cors-6.0.1-py3-none-any.whl (13 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading pynose-1.5.5-py3-none-any.whl (130 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.7/130.7 kB 12.4 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading coverage-7.6.12-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (241 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 241.0/241.0 kB 7.1 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading factory_boy-3.3.3-py2.py3-none-any.whl (37 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading flake8-7.1.2-py2.py3-none-any.whl (57 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 40.9 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading pylint-3.3.4-py3-none-any.whl (522 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 522.3/522.3 kB 13.3 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading astroid-3.3.11-py3-none-any.whl (275 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 275.6/275.6 kB 15.8 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading click-8.5.0-py3-none-any.whl (125 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 11.9 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 10.5 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading faker-40.43.0-py3-none-any.whl (2.1 MB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 25.4 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.4/624.4 kB 7.3 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading isort-6.1.0-py3-none-any.whl (94 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.3/94.3 kB 11.1 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 16.4 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading platformdirs-4.13.5-py3-none-any.whl (32 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading pycodestyle-2.12.1-py2.py3-none-any.whl (31 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading pyflakes-3.2.0-py2.py3-none-any.whl (62 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.7/62.7 kB 10.6 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Downloading tomlkit-0.15.2-py3-none-any.whl (52 kB)
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.2/52.2 kB 16.9 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Installing collected packages: flask-talisman, tomlkit, pynose, pyflakes, pycodestyle, psycopg2-binary, platformdirs, mccabe, MarkupSafe, itsdangerous, isort, gunicorn, greenlet, Faker, dill, coverage, click, astroid, Werkzeug, SQLAlchemy, pylint, Jinja2, flake8, factory-boy, Flask, Flask-SQLAlchemy, Flask-Cors
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Successfully installed Faker-40.43.0 Flask-2.2.5 Flask-Cors-6.0.1 Flask-SQLAlchemy-2.5.1 Jinja2-3.1.6 MarkupSafe-3.0.4 SQLAlchemy-1.4.54 Werkzeug-2.3.8 astroid-3.3.11 click-8.5.0 coverage-7.6.12 dill-0.4.1 factory-boy-3.3.3 flake8-7.1.2 flask-talisman-1.1.0 greenlet-3.5.6 gunicorn-23.0.0 isort-6.1.0 itsdangerous-2.2.0 mccabe-0.7.0 platformdirs-4.13.5 psycopg2-binary-2.9.10 pycodestyle-2.12.1 pyflakes-3.2.0 pylint-3.3.4 pynose-1.5.5 tomlkit-0.15.2
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] 
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] [notice] A new release of pip is available: 24.0 -> 26.2.2
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] [notice] To update, run: pip install --upgrade pip
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] 
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] ------------------------------------
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Your code has been rated at 10.00/10
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] 
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Create an account and add it to the database ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Create an Account and assert that it exists ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Delete an account from the database ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Deserialize an account ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should not Deserialize an account with a KeyError ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should not Deserialize an account with a TypeError ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Find an Account by name ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should List all Accounts in the database ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Read an account ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Serialize an account ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Update an account ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should not Create an Account when sending the wrong data ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should allow configured origins and reject other origins. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should Create a new Account ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should delete an account and allow repeated deletion. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should filter accounts by name. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should be healthy ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should get 200_OK from the Home Page ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should return a structured response for an internal error. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should reject invalid types, lengths, dates and JSON shapes. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should list all accounts and return an empty list when absent. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should reject malformed JSON. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should respond with a JSON 405 for unsupported methods. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should default the join date and allow a missing phone. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should read a created account using its Location header. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should return 404 when an account is absent. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should set Talisman security headers. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should not Create an Account when sending the wrong media type ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should update an account and preserve its identifier. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should reject incomplete updates and leave stored data unchanged. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should return 404 when replacing an absent account. ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] It should call the db-create command ... ok
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] 
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Name                               Stmts   Miss  Cover   Missing
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] ----------------------------------------------------------------
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/__init__.py                   20      0   100%
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/common/__init__.py             0      0   100%
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/common/cli_commands.py         7      0   100%
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/common/error_handlers.py      32      0   100%
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/common/log_handlers.py        10      1    90%   21
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/common/status.py              45      0   100%
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/config.py                     11      5    55%   12-16
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/models.py                     77      2    97%   32, 98
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] service/routes.py                     51      0   100%
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] ----------------------------------------------------------------
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] TOTAL                                253      8    97%
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] ----------------------------------------
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] Ran 32 tests in 0.402s
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] 
+[pod/accounts-cd-gpd2m-check-pod/step-lint-and-test] OK
+[pod/accounts-cd-gpd2m-check-pod/prepare] 2026/10/24 06:32:18 Entrypoint initialization
+[pod/accounts-cd-gpd2m-check-pod/place-scripts] 2026/10/24 06:32:19 Decoded script /tekton/scripts/script-0-djw4p
+===== build =====
+[pod/accounts-cd-gpd2m-build-pod/place-scripts] 2026/10/24 06:32:58 Decoded script /tekton/scripts/script-0-dqxmr
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 1/10: FROM python:3.11-slim
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Resolved "python" as an alias (/etc/containers/registries.conf.d/000-shortnames.conf)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Trying to pull docker.io/library/python:3.11-slim...
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Getting image source signatures
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:b0aec4a98ced1e92f1d50c37aa89c78d60e3dc6a52d61f8134afda24b185ad06
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:90d47cf54851a8d83f33db71f0025a8ba367c12fb24817259dd9736098cb305b
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:6d9af71a343efe2a00fdfc9507db3bdf3530bf3f8cf2975eb1be235a7eb70128
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying config sha256:b4403f3b7acf5e0700a5dd4e7ab01456d62b557a208a04f8a42d3470d93b5730
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Writing manifest to image destination
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 2/10: ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PORT=8080
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 3/10: WORKDIR /app
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 4/10: COPY requirements.txt .
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 5/10: RUN pip install --no-cache-dir -r requirements.txt     && useradd --create-home --uid 10001 appuser
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting Flask==2.2.5 (from -r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading Flask-2.2.5-py3-none-any.whl.metadata (3.9 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting Werkzeug==2.3.8 (from -r requirements.txt (line 2))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading werkzeug-2.3.8-py3-none-any.whl.metadata (4.1 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting Flask-SQLAlchemy==2.5.1 (from -r requirements.txt (line 3))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl.metadata (3.1 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting SQLAlchemy==1.4.54 (from -r requirements.txt (line 4))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading SQLAlchemy-1.4.54-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting psycopg2-binary==2.9.10 (from -r requirements.txt (line 5))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading psycopg2_binary-2.9.10-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting gunicorn==23.0.0 (from -r requirements.txt (line 6))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting flask-talisman==1.1.0 (from -r requirements.txt (line 7))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl.metadata (18 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting Flask-Cors==6.0.1 (from -r requirements.txt (line 8))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading flask_cors-6.0.1-py3-none-any.whl.metadata (5.3 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting Jinja2>=3.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting itsdangerous>=2.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting click>=8.0 (from Flask==2.2.5->-r requirements.txt (line 1))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting MarkupSafe>=2.1.1 (from Werkzeug==2.3.8->-r requirements.txt (line 2))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Collecting greenlet!=0.4.17 (from SQLAlchemy==1.4.54->-r requirements.txt (line 4))
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]   Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from gunicorn==23.0.0->-r requirements.txt (line 6)) (26.3)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading Flask-2.2.5-py3-none-any.whl (101 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.8/101.8 kB 3.0 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading werkzeug-2.3.8-py3-none-any.whl (242 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.3/242.3 kB 6.4 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading SQLAlchemy-1.4.54-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 11.0 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading psycopg2_binary-2.9.10-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 18.5 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 9.5 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading flask_cors-6.0.1-py3-none-any.whl (13 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading click-8.5.0-py3-none-any.whl (125 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 9.1 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading greenlet-3.5.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.4/624.4 kB 5.8 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 7.2 MB/s eta 0:00:00
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Installing collected packages: flask-talisman, psycopg2-binary, MarkupSafe, itsdangerous, gunicorn, greenlet, click, Werkzeug, SQLAlchemy, Jinja2, Flask, Flask-SQLAlchemy, Flask-Cors
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Successfully installed Flask-2.2.5 Flask-Cors-6.0.1 Flask-SQLAlchemy-2.5.1 Jinja2-3.1.6 MarkupSafe-3.0.4 SQLAlchemy-1.4.54 Werkzeug-2.3.8 click-8.5.0 flask-talisman-1.1.0 greenlet-3.5.6 gunicorn-23.0.0 itsdangerous-2.2.0 psycopg2-binary-2.9.10
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] 
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] [notice] A new release of pip is available: 24.0 -> 26.2.2
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] [notice] To update, run: pip install --upgrade pip
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 6/10: COPY --chown=appuser:appuser service ./service
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 7/10: USER 10001
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 8/10: EXPOSE 8080
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 9/10: HEALTHCHECK --interval=30s --timeout=3s --start-period=15s     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')" || exit 1
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] STEP 10/10: CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "1", "--access-logfile", "-", "--error-logfile", "-", "service:app"]
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] COMMIT accounts-registry:5000/customer-accounts:cd-1
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Getting image source signatures
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:a70f6272827f64e1427d048ced77491aab5d64ab95725e56920802ff391197d7
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:535a5d38abecfac4fa49da33fa942b53c53c463bd0d39a860967e46eb03faafe
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:6972161a9a77e7c1afb997daac15abc54f5b70c7b40b814601f53e038d8c398c
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:d86e9bd004831a6069b9a02e5caac80b73526315f52719079b4017b099956ed2
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:4691010392b874c97e1dcd5db91c432146dfe9e81595d572a49537f2bbc542f4
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying config sha256:d1ec68dd0f90159d6e65ebb8771606ee60a98b569ab980e8e96c2c8196220609
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Writing manifest to image destination
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] --> d1ec68dd0f90
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Successfully tagged accounts-registry:5000/customer-accounts:cd-1
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] d1ec68dd0f90159d6e65ebb8771606ee60a98b569ab980e8e96c2c8196220609
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Getting image source signatures
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:4691010392b874c97e1dcd5db91c432146dfe9e81595d572a49537f2bbc542f4
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:535a5d38abecfac4fa49da33fa942b53c53c463bd0d39a860967e46eb03faafe
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:d86e9bd004831a6069b9a02e5caac80b73526315f52719079b4017b099956ed2
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:a70f6272827f64e1427d048ced77491aab5d64ab95725e56920802ff391197d7
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying blob sha256:6972161a9a77e7c1afb997daac15abc54f5b70c7b40b814601f53e038d8c398c
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Copying config sha256:d1ec68dd0f90159d6e65ebb8771606ee60a98b569ab980e8e96c2c8196220609
+[pod/accounts-cd-gpd2m-build-pod/step-build-and-push] Writing manifest to image destination
+[pod/accounts-cd-gpd2m-build-pod/prepare] 2026/10/24 06:32:58 Entrypoint initialization
+===== deploy =====
+[pod/accounts-cd-gpd2m-deploy-pod/prepare] 2026/10/24 06:34:37 Entrypoint initialization
+[pod/accounts-cd-gpd2m-deploy-pod/place-scripts] 2026/10/24 06:34:39 Decoded script /tekton/scripts/script-0-gfxb4
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] deployment.apps/accounts configured
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] service/accounts unchanged
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] deployment.apps/accounts image updated
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] Waiting for deployment "accounts" rollout to finish: 0 out of 1 new replicas have been updated...
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] Waiting for deployment "accounts" rollout to finish: 0 out of 1 new replicas have been updated...
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] Waiting for deployment "accounts" rollout to finish: 1 old replicas are pending termination...
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] Waiting for deployment "accounts" rollout to finish: 1 old replicas are pending termination...
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] Waiting for deployment "accounts" rollout to finish: 1 old replicas are pending termination...
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] deployment "accounts" successfully rolled out
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] deployment.apps/accounts   1/1     1            1           4m49s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] deployment.apps/postgres   1/1     1            1           5m11s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] 
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] NAME                                  READY   STATUS        RESTARTS        AGE
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/accounts-5f7795948f-8pldg         1/1     Terminating   2 (4m39s ago)   4m50s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/accounts-85f6b9646c-lqkmx         1/1     Running       0               15s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/accounts-cd-gpd2m-build-pod       0/1     Completed     0               2m34s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/accounts-cd-gpd2m-check-pod       0/1     Completed     0               3m14s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/accounts-cd-gpd2m-clone-pod       0/1     Completed     0               3m49s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/accounts-cd-gpd2m-deploy-pod      1/1     Running       0               55s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/affinity-assistant-89bc4a4ac1-0   1/1     Running       0               3m49s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] pod/postgres-6bb9955b9c-j9fvx         1/1     Running       0               5m12s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] 
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] NAME                                  DESIRED   CURRENT   READY   AGE
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] replicaset.apps/accounts-5f7795948f   0         0         0       4m50s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] replicaset.apps/accounts-6b69c8dcbf   0         0         0       4m50s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] replicaset.apps/accounts-85f6b9646c   1         1         1       15s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] replicaset.apps/postgres-6bb9955b9c   1         1         1       5m12s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] 
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] service/accounts   ClusterIP   10.43.227.167   <none>        8080/TCP   4m50s
+[pod/accounts-cd-gpd2m-deploy-pod/step-deploy] service/postgres   ClusterIP   10.43.1.101     <none>        5432/TCP   5m12s
+```
+
+## Question 33 (UPLOAD)
+
+Upload cd-pipeline-done.jpeg

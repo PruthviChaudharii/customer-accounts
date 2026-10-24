@@ -1,0 +1,14 @@
+{
+  "project": "https://github.com/users/PruthviChaudharii/projects/1",
+  "pipeline_run": "accounts-cd-gpd2m",
+  "pipeline_result": "Succeeded",
+  "tasks_succeeded": [
+    "clone",
+    "check",
+    "build",
+    "deploy"
+  ],
+  "cluster": "k3d-accounts-capstone",
+  "namespace": "customer-accounts",
+  "image": "accounts-registry:5000/customer-accounts:cd-1"
+}

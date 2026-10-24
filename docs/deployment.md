@@ -50,3 +50,20 @@ tkn -n customer-accounts pipelinerun logs --last -f > evidence/pipelinerun.txt
 Verify the PipelineRun's `Succeeded` condition and the deployment rollout before
 marking the CD story complete. Buildah requires a namespace that permits its privileged
 build container. Check your cluster's policy before running this pipeline.
+
+## Verified local execution
+
+On 24 October 2026, the service was deployed to the `accounts-capstone` k3d cluster
+(Kubernetes v1.35.5+k3s1), namespace `customer-accounts`. Tekton Pipelines v1.17.1
+completed PipelineRun `accounts-cd-gpd2m` with all four tasks successful and none failed.
+The pipeline built and pushed `accounts-registry:5000/customer-accounts:cd-1`, then
+rolled out the accounts deployment. The app and PostgreSQL each had one ready replica.
+
+Local configuration is in `k8s/postgres-local.yaml` and `tekton/pipelinerun-local.yaml`.
+The database password was randomly generated and is held only in Kubernetes Secrets.
+The local Docker registry does not use authentication or TLS and is intended only for
+this local development environment. Remote registries should use the default TLS verification.
+
+Captured evidence: `evidence/kube-app-output`, `evidence/kube-deploy-accounts`, and
+`evidence/pipelinerun.txt`. The latter contains logs from every container in all four
+Tekton task pods, with task and container prefixes.

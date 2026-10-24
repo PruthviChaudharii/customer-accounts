@@ -1,0 +1,2 @@
+REPOSITORY          TAG       IMAGE ID       CREATED AT                      SIZE
+customer-accounts   1.0       fa552051eb3d   2026-10-24 11:45:52 +0530 IST   231MB
