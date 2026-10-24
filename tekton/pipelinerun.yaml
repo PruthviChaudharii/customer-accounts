@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  generateName: accounts-cd-
+spec:
+  pipelineRef: {name: cd-pipeline}
+  taskRunTemplate:
+    serviceAccountName: accounts-pipeline
+  params:
+    - name: repo-url
+      value: https://github.com/PruthviChaudharii/customer-accounts.git
+    - name: branch
+      value: main
+    - name: image
+      value: YOUR_REGISTRY/accounts:1.0
+  workspaces:
+    - name: pipeline-workspace
+      volumeClaimTemplate:
+        spec:
+          accessModes: [ReadWriteOnce]
+          resources:
+            requests:
+              storage: 1Gi

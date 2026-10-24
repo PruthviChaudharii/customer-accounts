@@ -42,7 +42,7 @@ venv: ## Create a Python virtual environment
 install: ## Install Python dependencies
 	$(info Installing dependencies...)
 	python3 -m pip install --upgrade pip wheel
-	pip install -r requirements.txt
+	pip install -r requirements-dev.txt
 
 lint: ## Run the linter
 	$(info Running linting...)
@@ -52,11 +52,11 @@ lint: ## Run the linter
 .PHONY: tests
 tests: ## Run the unit tests
 	$(info Running tests...)
-	nosetests -vv --with-spec --spec-color --with-coverage --cover-package=service
+	nosetests
 
 run: ## Run the service
 	$(info Starting service...)
-	honcho start
+	gunicorn --bind 0.0.0.0:8080 --workers 1 service:app
 
 dbrm: ## Stop and remove PostgreSQL in Docker
 	$(info Stopping and removing PostgreSQL...)

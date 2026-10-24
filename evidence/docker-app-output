@@ -1,0 +1,16 @@
+curl.exe --silent --show-error --include http://localhost:8080/
+
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Sat, 24 Oct 2026 06:16:11 GMT
+Connection: close
+Content-Type: application/json
+Content-Length: 93
+Access-Control-Allow-Origin: http://localhost:8080
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+
+{"name":"Account REST API Service","paths":"http://localhost:8080/accounts","version":"1.0"}
