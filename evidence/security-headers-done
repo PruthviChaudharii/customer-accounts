@@ -1,0 +1,50 @@
+It should Create an account and add it to the database ... ok
+It should Create an Account and assert that it exists ... ok
+It should Delete an account from the database ... ok
+It should Deserialize an account ... ok
+It should not Deserialize an account with a KeyError ... ok
+It should not Deserialize an account with a TypeError ... ok
+It should Find an Account by name ... ok
+It should List all Accounts in the database ... ok
+It should Read an account ... ok
+It should Serialize an account ... ok
+It should Update an account ... ok
+It should not Create an Account when sending the wrong data ... ok
+It should allow configured origins and reject other origins. ... ok
+It should Create a new Account ... ok
+It should delete an account and allow repeated deletion. ... ok
+It should filter accounts by name. ... ok
+It should be healthy ... ok
+It should get 200_OK from the Home Page ... ok
+It should return a structured response for an internal error. ... ok
+It should reject invalid types, lengths, dates and JSON shapes. ... ok
+It should list all accounts and return an empty list when absent. ... ok
+It should reject malformed JSON. ... ok
+It should respond with a JSON 405 for unsupported methods. ... ok
+It should default the join date and allow a missing phone. ... ok
+It should read a created account using its Location header. ... ok
+It should return 404 when an account is absent. ... ok
+It should set Talisman security headers. ... ok
+It should not Create an Account when sending the wrong media type ... ok
+It should update an account and preserve its identifier. ... ok
+It should reject incomplete updates and leave stored data unchanged. ... ok
+It should return 404 when replacing an absent account. ... ok
+It should call the db-create command ... ok
+
+Name                               Stmts   Miss  Cover   Missing
+----------------------------------------------------------------
+service\__init__.py                   20      0   100%
+service\common\__init__.py             0      0   100%
+service\common\cli_commands.py         7      0   100%
+service\common\error_handlers.py      32      0   100%
+service\common\log_handlers.py        10      1    90%   21
+service\common\status.py              45      0   100%
+service\config.py                     11      5    55%   12-16
+service\models.py                     77      2    97%   32, 98
+service\routes.py                     51      0   100%
+----------------------------------------------------------------
+TOTAL                                253      8    97%
+----------------------------------------
+Ran 32 tests in 5.128s
+
+OK

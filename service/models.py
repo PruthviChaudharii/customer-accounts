@@ -92,7 +92,7 @@ class Account(db.Model, PersistentBase):
     email = db.Column(db.String(64))
     address = db.Column(db.String(256))
     phone_number = db.Column(db.String(32), nullable=True)  # phone number is optional
-    date_joined = db.Column(db.Date(), nullable=False, default=date.today())
+    date_joined = db.Column(db.Date(), nullable=False, default=date.today)
 
     def __repr__(self):
         return f"<Account {self.name} id=[{self.id}]>"
@@ -116,6 +116,18 @@ class Account(db.Model, PersistentBase):
             data (dict): A dictionary containing the resource data
         """
         try:
+            if not isinstance(data, dict):
+                raise TypeError("expected a JSON object")
+            for field, limit in (("name", 64), ("email", 64), ("address", 256)):
+                if field in data and (
+                    not isinstance(data[field], str) or not data[field].strip() or len(data[field]) > limit
+                ):
+                    raise DataValidationError(
+                        f"Invalid Account: {field} must be a nonempty string of at most {limit} characters"
+                    )
+            phone = data.get("phone_number")
+            if phone is not None and (not isinstance(phone, str) or len(phone) > 32):
+                raise DataValidationError("Invalid Account: phone_number must be a string of at most 32 characters")
             self.name = data["name"]
             self.email = data["email"]
             self.address = data["address"]
@@ -127,7 +139,7 @@ class Account(db.Model, PersistentBase):
                 self.date_joined = date.today()
         except KeyError as error:
             raise DataValidationError("Invalid Account: missing " + error.args[0]) from error
-        except TypeError as error:
+        except (TypeError, ValueError) as error:
             raise DataValidationError(
                 "Invalid Account: body of request contained "
                 "bad or no data - " + error.args[0]

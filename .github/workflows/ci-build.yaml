@@ -1,0 +1,43 @@
+name: CI Build
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: accounts
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URI: postgresql://postgres:postgres@localhost:5432/accounts
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: |
+          flake8 service tests
+          pylint service --fail-under=9
+      - name: Unit tests with nosetests
+        run: nosetests
+      - name: Build Docker image
+        run: docker build -t customer-accounts:ci .

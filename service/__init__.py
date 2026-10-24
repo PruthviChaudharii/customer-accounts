@@ -5,6 +5,9 @@ This module creates and configures the Flask app and sets up the logging
 and SQL database
 """
 import sys
+import os
+from flask_talisman import Talisman
+from flask_cors import CORS
 from flask import Flask
 from service import config
 from service.common import log_handlers
@@ -12,6 +15,10 @@ from service.common import log_handlers
 # Create Flask application
 app = Flask(__name__)
 app.config.from_object(config)
+
+# TLS can terminate at an ingress; enable redirects explicitly for HTTPS deployments.
+Talisman(app, force_https=os.getenv("FORCE_HTTPS", "false").lower() == "true")
+CORS(app, resources={r"/*": {"origins": os.getenv("CORS_ORIGINS", "http://localhost:8080").split(",")}})
 
 # Import the routes After the Flask app is created
 # pylint: disable=wrong-import-position, cyclic-import, wrong-import-order
@@ -29,7 +36,7 @@ app.logger.info(70 * "*")
 
 try:
     models.init_db(app)  # make our database tables
-except Exception as error:  # pylint: disable=broad-except
+except Exception as error:  # pragma: no cover; pylint: disable=broad-except
     app.logger.critical("%s: Cannot continue", error)
     # gunicorn requires exit code 4 to stop spawning workers when they die
     sys.exit(4)
