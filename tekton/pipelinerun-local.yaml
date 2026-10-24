@@ -1,0 +1,26 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  generateName: accounts-cd-
+spec:
+  pipelineRef: {name: cd-pipeline}
+  taskRunTemplate:
+    serviceAccountName: accounts-pipeline
+  params:
+    - name: repo-url
+      value: https://github.com/PruthviChaudharii/customer-accounts.git
+    - name: branch
+      value: main
+    - name: image
+      value: accounts-registry:5000/customer-accounts:cd-1
+    # This registry runs inside the isolated local Docker development network.
+    - name: tls-verify
+      value: 'false'
+  workspaces:
+    - name: pipeline-workspace
+      volumeClaimTemplate:
+        spec:
+          accessModes: [ReadWriteOnce]
+          resources:
+            requests:
+              storage: 1Gi

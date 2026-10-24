@@ -8,6 +8,8 @@ spec:
     - name: branch
       default: main
     - name: image
+    - name: tls-verify
+      default: 'true'
   workspaces:
     - name: pipeline-workspace
   tasks:
@@ -28,6 +30,7 @@ spec:
       taskRef: {name: accounts-build}
       params:
         - {name: image, value: $(params.image)}
+        - {name: tls-verify, value: $(params.tls-verify)}
       workspaces:
         - {name: source, workspace: pipeline-workspace}
     - name: deploy

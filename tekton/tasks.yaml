@@ -53,6 +53,8 @@ metadata:
 spec:
   params:
     - name: image
+    - name: tls-verify
+      default: 'true'
   workspaces:
     - name: source
   volumes:
@@ -71,11 +73,13 @@ spec:
       env:
         - name: IMAGE
           value: $(params.image)
+        - name: TLS_VERIFY
+          value: $(params.tls-verify)
       script: |
         #!/bin/sh
         set -eu
-        buildah --storage-driver=vfs bud --format=docker -t "$IMAGE" .
-        buildah --storage-driver=vfs push --authfile /registry/config.json "$IMAGE" "docker://$IMAGE"
+        buildah --storage-driver=vfs bud --isolation=chroot --format=docker -t "$IMAGE" .
+        buildah --storage-driver=vfs push --tls-verify="$TLS_VERIFY" --authfile /registry/config.json "$IMAGE" "docker://$IMAGE"
 ---
 apiVersion: tekton.dev/v1
 kind: Task
@@ -88,7 +92,7 @@ spec:
     - name: source
   steps:
     - name: deploy
-      image: bitnami/kubectl:1.32.2
+      image: alpine/k8s:1.32.2
       workingDir: $(workspaces.source.path)/repo
       env:
         - name: IMAGE
